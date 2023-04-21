@@ -351,20 +351,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-GI-VAp">
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-GI-VAp">
                                 <rect key="frame" x="22" y="832" width="154" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="154" id="Xw9-wc-q8S"/>
-                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Log uit"/>
                                 <connections>
                                     <action selector="UploadFIlesPressed:" destination="WZd-bc-3DC" eventType="touchUpInside" id="B17-LJ-zQ2"/>
                                 </connections>
                             </button>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-Qb-dQX">
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-Qb-dQX">
                                 <rect key="frame" x="190" y="832" width="204" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Terug naar main"/>
@@ -372,8 +371,9 @@
                                     <action selector="UploadFIlesPressed:" destination="WZd-bc-3DC" eventType="touchUpInside" id="tqH-dZ-yh3"/>
                                 </connections>
                             </button>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koI-r8-SAR">
+                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koI-r8-SAR">
                                 <rect key="frame" x="22" y="782" width="372" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Upload Files"/>
@@ -385,16 +385,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oC-Xh-Hee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bYg-Qb-dQX" firstAttribute="leading" secondItem="0l9-GI-VAp" secondAttribute="trailing" constant="14" id="AM9-Cp-OAR"/>
-                            <constraint firstItem="koI-r8-SAR" firstAttribute="leading" secondItem="1oC-Xh-Hee" secondAttribute="leading" constant="22" id="PpX-3o-26Z"/>
-                            <constraint firstItem="0l9-GI-VAp" firstAttribute="top" secondItem="koI-r8-SAR" secondAttribute="bottom" constant="15" id="TjX-Ln-cAo"/>
-                            <constraint firstItem="0l9-GI-VAp" firstAttribute="baseline" secondItem="bYg-Qb-dQX" secondAttribute="baseline" id="kus-BP-oL3"/>
-                            <constraint firstItem="koI-r8-SAR" firstAttribute="trailing" secondItem="bYg-Qb-dQX" secondAttribute="trailing" id="otu-yK-tiz"/>
-                            <constraint firstItem="koI-r8-SAR" firstAttribute="top" secondItem="1oC-Xh-Hee" secondAttribute="top" constant="738" id="pTG-mq-6uN"/>
-                            <constraint firstItem="koI-r8-SAR" firstAttribute="trailing" secondItem="qel-MU-NXF" secondAttribute="trailingMargin" id="sES-GS-7Lf"/>
-                            <constraint firstItem="koI-r8-SAR" firstAttribute="leading" secondItem="0l9-GI-VAp" secondAttribute="leading" id="xje-39-IsH"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="kiR-Ho-suf"/>
                     <connections>

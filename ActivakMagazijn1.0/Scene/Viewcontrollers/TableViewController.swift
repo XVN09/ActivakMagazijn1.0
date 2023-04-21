@@ -38,15 +38,6 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
 
 
     }
-    @IBAction func onLogOutButtonTapped(){
-        do{
-            try Auth.auth().signOut()
-        
-        } catch let error as NSError {
-            print(error)
-        }
-        
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }

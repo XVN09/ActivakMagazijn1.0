@@ -27,24 +27,17 @@ class ProfileView : UIViewController {
         }
     }
     
-    @IBAction func LogoutButtonPressed(_ sender: Any)
-    {
-        let auth = Auth.auth()
+    @IBAction func onLogOutButtonTapped(){
+        do{
+            try Auth.auth().signOut()
         
-        do {
-            try auth.signOut()
-            let defaults = UserDefaults.standard
-            defaults.set(false, forKey: "isUserSignedIn")
-            self.dismiss(animated: true, completion: nil)
-        } catch let signOutError {
-            self.present(Service.createAlertController(title: "Error", message: signOutError.localizedDescription), animated: true, completion: nil)
+        } catch let error as NSError {
+            print(error)
         }
-        if Auth.auth().currentUser?.uid == nil {
-            self.performSegue(withIdentifier: "BackToHomeSegue", sender: self)
-        }
+        
     }
     
-    @IBAction func BackToHomeButtong(_ sender: Any){
+    @IBAction func BackToHomeButton(_ sender: Any){
         self.performSegue(withIdentifier: "BackToHomeSegue", sender: self)
     }
     
