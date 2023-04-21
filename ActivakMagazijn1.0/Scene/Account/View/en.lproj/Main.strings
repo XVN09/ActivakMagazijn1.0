@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "Log in of maak een account aan"; ObjectID = "6Oa-bs-z4e"; */
+"6Oa-bs-z4e.text" = "Log in of maak een account aan";
+
+/* Class = "UILabel"; text = "Account aanmaken"; ObjectID = "8j7-7C-e0A"; */
+"8j7-7C-e0A.text" = "Account aanmaken";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "ANg-ze-SU7"; */
+"ANg-ze-SU7.text" = "Category";
+
+/* Class = "UIViewController"; title = "Welcome"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Welcome";
+
+/* Class = "UITextField"; placeholder = "Paswoord"; ObjectID = "Beu-OP-smF"; */
+"Beu-OP-smF.placeholder" = "Paswoord";
+
+/* Class = "UIButton"; configuration.title = "Account aanmaken"; ObjectID = "Fx9-f2-N6A"; */
+"Fx9-f2-N6A.configuration.title" = "Account aanmaken";
+
+/* Class = "UITextField"; placeholder = "Paswoord"; ObjectID = "J7N-je-Q0n"; */
+"J7N-je-Q0n.placeholder" = "Paswoord";
+
+/* Class = "UINavigationItem"; title = "Producten"; ObjectID = "NI6-uC-lbA"; */
+"NI6-uC-lbA.title" = "Producten";
+
+/* Class = "UIViewController"; title = "SignIn"; ObjectID = "NrB-tb-ip0"; */
+"NrB-tb-ip0.title" = "SignIn";
+
+/* Class = "UIButton"; configuration.title = "Login "; ObjectID = "VPO-ob-dfw"; */
+"VPO-ob-dfw.configuration.title" = "Login ";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "bif-Jz-2Ru"; */
+"bif-Jz-2Ru.title" = "Item";
+
+/* Class = "UILabel"; text = "Naam product"; ObjectID = "c2a-9i-Aqh"; */
+"c2a-9i-Aqh.text" = "Naam product";
+
+/* Class = "UIButton"; configuration.title = "Login "; ObjectID = "iwG-az-Bnl"; */
+"iwG-az-Bnl.configuration.title" = "Login ";
+
+/* Class = "UITextField"; placeholder = "Volledige naam"; ObjectID = "jmC-bK-ZjI"; */
+"jmC-bK-ZjI.placeholder" = "Volledige naam";
+
+/* Class = "UINavigationItem"; title = "Account"; ObjectID = "kiR-Ho-suf"; */
+"kiR-Ho-suf.title" = "Account";
+
+/* Class = "UILabel"; text = "Prijs"; ObjectID = "kj0-Ow-lx8"; */
+"kj0-Ow-lx8.text" = "Prijs";
+
+/* Class = "UIButton"; configuration.title = "Upload Files"; ObjectID = "koI-r8-SAR"; */
+"koI-r8-SAR.configuration.title" = "Upload Files";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "oXf-50-8eX"; */
+"oXf-50-8eX.text" = "Login";
+
+/* Class = "UIBarButtonItem"; title = "Log uit"; ObjectID = "pPV-gr-5ug"; */
+"pPV-gr-5ug.title" = "Log uit";
+
+/* Class = "UITextField"; placeholder = "E-mail"; ObjectID = "pzy-K3-A8W"; */
+"pzy-K3-A8W.placeholder" = "E-mail";
+
+/* Class = "UIButton"; configuration.title = "Account aanmaken"; ObjectID = "w6d-cJ-uSB"; */
+"w6d-cJ-uSB.configuration.title" = "Account aanmaken";
+
+/* Class = "UIViewController"; title = "Sign Up"; ObjectID = "w8X-FF-ijE"; */
+"w8X-FF-ijE.title" = "Sign Up";
+
+/* Class = "UITextField"; placeholder = "E-mail adres"; ObjectID = "yjB-gB-uh1"; */
+"yjB-gB-uh1.placeholder" = "E-mail adres";

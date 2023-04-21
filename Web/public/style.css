@@ -1,0 +1,67 @@
+/* Set the background image */
+body {
+    background-size: cover;
+    font-family: sans-serif;
+}
+/* Set the colors */
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+p {
+    color: #fff;
+}
+
+button, a.button {
+    background-color: #ff99cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+button:hover, a.button:hover {
+    background-color: #cc6699;
+}
+
+/* Add a little bit of animation to the button */
+button, a.button {
+    transition: all 0.3s ease;
+}
+
+button:active, a.button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+li a {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	display: block;
+}
+li {
+	float: left;
+}
+li a:hover {
+	background-color: #111;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+table {
+    color: white;
+    background-color: black;
+}
+table th {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
