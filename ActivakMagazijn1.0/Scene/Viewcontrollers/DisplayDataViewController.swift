@@ -82,5 +82,15 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
    
     }
     
+    @IBAction func LoginButtonTapped(){
+        if Auth.auth().currentUser?.uid != nil
+        {
+            self.performSegue(withIdentifier: "LoggedInSegue", sender: self)
+        } else
+        {
+            self.performSegue(withIdentifier: "AccountStartScreenSegue", sender: self)
+        }
+    }
+    
     
 }

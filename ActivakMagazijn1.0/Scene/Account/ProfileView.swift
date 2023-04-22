@@ -34,7 +34,9 @@ class ProfileView : UIViewController {
         } catch let error as NSError {
             print(error)
         }
-        
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "BackToHomeSegue", sender: self)
+        }
     }
     
     @IBAction func BackToHomeButton(_ sender: Any){

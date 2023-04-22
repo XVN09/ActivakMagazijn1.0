@@ -20,7 +20,7 @@
 		6164909429E87D3A0007C752 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 6164909329E87D3A0007C752 /* FirebaseStorageCombine-Community */; };
 		6164909629E889B20007C752 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909529E889B20007C752 /* DataCell.swift */; };
 		6164909829E9E0B10007C752 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909729E9E0B10007C752 /* MyData.swift */; };
-		6164909A29E9EFD80007C752 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909929E9EFD80007C752 /* TableViewController.swift */; };
+		6164909A29E9EFD80007C752 /* DisplayDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909929E9EFD80007C752 /* DisplayDataViewController.swift */; };
 		6194045828D3A201001B31E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6194045728D3A201001B31E1 /* AppDelegate.swift */; };
 		6194045A28D3A201001B31E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6194045928D3A201001B31E1 /* SceneDelegate.swift */; };
 		6194045F28D3A201001B31E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6194045D28D3A201001B31E1 /* Main.storyboard */; };
@@ -60,7 +60,7 @@
 		615FA25128DB7A0600EA2FDC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6164909529E889B20007C752 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		6164909729E9E0B10007C752 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
-		6164909929E9EFD80007C752 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		6164909929E9EFD80007C752 /* DisplayDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayDataViewController.swift; sourceTree = "<group>"; };
 		6194045428D3A201001B31E1 /* ActivakMagazijn1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivakMagazijn1.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6194045728D3A201001B31E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6194045928D3A201001B31E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 		61DB023828FBF6FE00330945 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				6164909929E9EFD80007C752 /* TableViewController.swift */,
+				6164909929E9EFD80007C752 /* DisplayDataViewController.swift */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 				61A972A628D4D6860007C2CD /* WelcomeViewController.swift in Sources */,
 				61A4415F29EB2132001F6AA9 /* AddItemToDatabase.swift in Sources */,
 				61A972A028D4D58D0007C2CD /* SignInViewController.swift in Sources */,
-				6164909A29E9EFD80007C752 /* TableViewController.swift in Sources */,
+				6164909A29E9EFD80007C752 /* DisplayDataViewController.swift in Sources */,
 				61A54067291666AC004E397E /* Service.swift in Sources */,
 				6164909629E889B20007C752 /* DataCell.swift in Sources */,
 				61A972A228D4D5990007C2CD /* SingUpViewController.swift in Sources */,

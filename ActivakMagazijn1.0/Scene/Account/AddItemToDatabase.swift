@@ -10,14 +10,14 @@ import FirebaseDatabase
 import FirebaseStorage
 
 
-class AddItemToDatabase: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let imagePicker : UIImagePickerController = UIImagePickerController()
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var clickToOpenGalleryButton : UIButton!
     @IBOutlet weak var titleTextField : UITextField!
     @IBOutlet weak var descriptionTextField : UITextField!
-    @IBOutlet weak var priceTextField : UITextField!
+    @IBOutlet weak var priceTextfield : UITextField!
     @IBOutlet weak var categoryTextField : UITextField!
  
     var ref : DatabaseReference!
@@ -72,8 +72,8 @@ class AddItemToDatabase: UIViewController,UIImagePickerControllerDelegate,UINavi
             
             let item = [ "title" : self.titleTextField.text,
                          "description" : self.descriptionTextField.text,
+                         "price" : self.priceTextfield.text,
                          "category" : self.categoryTextField.text,
-                         "price" : self.priceTextField.text,
                          "image" : url] as [String: Any]
             
             self.ref?.child("Info").setValue(item)
