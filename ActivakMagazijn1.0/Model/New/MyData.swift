@@ -11,21 +11,21 @@ import UIKit
 class MyData {
     
     var imgURL : String
-    var titleText : String
+    static var titleText : String = ""
     var categoryText : String
     var priceText : String
     
     init()
         {
             imgURL = ""
-            titleText = ""
+            MyData.titleText = ""
             categoryText = ""
             priceText = ""
         }
     
     func setData(url : String, title : String, category : String, price : String) {
         imgURL = url
-        titleText = title
+        MyData.titleText = title
         categoryText = category
         priceText = price
     }

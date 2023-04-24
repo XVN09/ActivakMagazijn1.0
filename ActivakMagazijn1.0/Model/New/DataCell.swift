@@ -19,7 +19,7 @@ class DataCell : UITableViewCell {
     func setValues(data : MyData)
     {
         
-        dataName.text = data.titleText
+        dataName.text = MyData.titleText
         dataCategory.text = data.categoryText
         dataPrice.text = data.priceText
         

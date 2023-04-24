@@ -351,18 +351,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-Qb-dQX">
-                                <rect key="frame" x="190" y="798" width="204" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Terug naar main"/>
-                                <connections>
-                                    <action selector="BackToHomeButton:" destination="WZd-bc-3DC" eventType="touchUpInside" id="VSe-Jp-JAd"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fmY-EI-HoB">
+                                <rect key="frame" x="0.0" y="41" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Welkom" id="7zd-R8-4tM" userLabel="Welkom">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" style="plain" id="TwF-kg-FU4">
+                                            <connections>
+                                                <segue destination="VJo-10-BkV" kind="presentation" id="wKV-pX-gt3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="HKL-Mz-cqR">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="UvX-b8-Wyf">
+                                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Log uit"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koI-r8-SAR">
-                                <rect key="frame" x="22" y="841" width="372" height="35"/>
+                                <rect key="frame" x="20" y="781" width="372" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -370,16 +381,6 @@
                                 <connections>
                                     <action selector="UploadFIlesPressed:" destination="WZd-bc-3DC" eventType="touchUpInside" id="JT8-Jg-yWU"/>
                                     <segue destination="Mw9-nS-7vb" kind="presentation" modalPresentationStyle="fullScreen" id="E8w-6s-b3c"/>
-                                </connections>
-                            </button>
-                            <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-GI-VAp">
-                                <rect key="frame" x="22" y="798" width="154" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Log uit"/>
-                                <connections>
-                                    <action selector="onLogOutButtonTapped" destination="WZd-bc-3DC" eventType="touchUpInside" id="Z6x-Co-KSr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -615,6 +616,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="E8w-6s-b3c"/>
+        <segue reference="q5D-hZ-wAp"/>
         <segue reference="Dcz-P3-c7B"/>
         <segue reference="MG7-hc-fo0"/>
         <segue reference="aSQ-R3-vEH"/>

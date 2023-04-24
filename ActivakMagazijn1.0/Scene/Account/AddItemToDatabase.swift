@@ -76,7 +76,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
                          "category" : self.categoryTextField.text,
                          "image" : url] as [String: Any]
             
-            self.ref?.child("Info").setValue(item)
+            self.ref?.child("Info").child(MyData.titleText).setValue(item)
             
         }
      //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)
