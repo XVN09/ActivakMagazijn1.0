@@ -369,7 +369,7 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Upload Files"/>
                                 <connections>
                                     <action selector="UploadFIlesPressed:" destination="WZd-bc-3DC" eventType="touchUpInside" id="JT8-Jg-yWU"/>
-                                    <segue destination="JWT-Te-gHe" kind="presentation" modalPresentationStyle="fullScreen" id="K0V-8P-YaM"/>
+                                    <segue destination="Mw9-nS-7vb" kind="presentation" modalPresentationStyle="fullScreen" id="E8w-6s-b3c"/>
                                 </connections>
                             </button>
                             <button autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l9-GI-VAp">
@@ -453,10 +453,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Lw-ph-NZ2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Upload Producten" id="bTI-2G-Sfk">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" style="plain" id="voS-zB-R57">
+                                            <connections>
+                                                <segue destination="WZd-bc-3DC" kind="presentation" modalPresentationStyle="fullScreen" id="Dcz-P3-c7B"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Nf-Xy-xai"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oXC-kg-czZ"/>
                     <connections>
                         <outlet property="categoryTextField" destination="if6-lT-Qd7" id="Fzc-IX-uzU"/>
                         <outlet property="clickToOpenGalleryButton" destination="fJ3-LF-da9" id="rkp-Ws-qRT"/>
@@ -468,7 +482,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQH-Ox-Sjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4157.971014492754" y="-1414.2857142857142"/>
+            <point key="canvasLocation" x="5033" y="-1414"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="shQ-k9-7p9">
+            <objects>
+                <navigationController id="Mw9-nS-7vb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="96r-Au-WQz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JWT-Te-gHe" kind="relationship" relationship="rootViewController" id="nOO-1b-frp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bl-Ue-cUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4123" y="-1414"/>
         </scene>
         <!--Producten-->
         <scene sceneID="9dX-Z3-aEp">
@@ -495,7 +525,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="ProductCell" rowHeight="100" id="99G-x6-tBW" userLabel="ProductenCell" customClass="DataCell" customModule="ActivakMagazijn1_0" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="DataCell" rowHeight="100" id="99G-x6-tBW" userLabel="ProductenCell" customClass="DataCell" customModule="ActivakMagazijn1_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="99G-x6-tBW" id="DVf-AI-8Kd">
@@ -585,6 +615,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Dcz-P3-c7B"/>
         <segue reference="MG7-hc-fo0"/>
         <segue reference="aSQ-R3-vEH"/>
     </inferredMetricsTieBreakers>

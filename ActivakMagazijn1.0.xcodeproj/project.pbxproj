@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6101D56D29F48DAF0076B7D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6101D56C29F48DAF0076B7D6 /* GoogleService-Info.plist */; };
 		615FA25228DB7A0600EA2FDC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FA25128DB7A0600EA2FDC /* logo.png */; };
 		6164908229E87D3A0007C752 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6164908129E87D3A0007C752 /* FirebaseAnalytics */; };
 		6164908429E87D3A0007C752 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 6164908329E87D3A0007C752 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -32,7 +33,6 @@
 		61A4415929EAC6B9001F6AA9 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 61A4415829EAC6B9001F6AA9 /* FirebaseFirestoreCombine-Community */; };
 		61A4415B29EAC6B9001F6AA9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 61A4415A29EAC6B9001F6AA9 /* FirebaseFirestoreSwift */; };
 		61A4415F29EB2132001F6AA9 /* AddItemToDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A4415E29EB2132001F6AA9 /* AddItemToDatabase.swift */; };
-		61A4416129EDA321001F6AA9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61A4416029EDA321001F6AA9 /* GoogleService-Info.plist */; };
 		61A54067291666AC004E397E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A54066291666AC004E397E /* Service.swift */; };
 		61A972A028D4D58D0007C2CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9729F28D4D58D0007C2CD /* SignInViewController.swift */; };
 		61A972A228D4D5990007C2CD /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A972A128D4D5990007C2CD /* SingUpViewController.swift */; };
@@ -57,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6101D56C29F48DAF0076B7D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		615FA25128DB7A0600EA2FDC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6164909529E889B20007C752 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		6164909729E9E0B10007C752 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		6194047728D3A202001B31E1 /* ActivakMagazijn1.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivakMagazijn1.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A4415329EAC4E5001F6AA9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		61A4415E29EB2132001F6AA9 /* AddItemToDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToDatabase.swift; sourceTree = "<group>"; };
-		61A4416029EDA321001F6AA9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		61A54066291666AC004E397E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		61A9729F28D4D58D0007C2CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		61A972A128D4D5990007C2CD /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 		61DB023528FBF68C00330945 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				61A4416029EDA321001F6AA9 /* GoogleService-Info.plist */,
+				6101D56C29F48DAF0076B7D6 /* GoogleService-Info.plist */,
 				6194046028D3A201001B31E1 /* ActivakMagazijn1_0.xcdatamodeld */,
 			);
 			path = Others;
@@ -384,7 +384,7 @@
 				6194046428D3A202001B31E1 /* Assets.xcassets in Resources */,
 				615FA25228DB7A0600EA2FDC /* logo.png in Resources */,
 				6194045F28D3A201001B31E1 /* Main.storyboard in Resources */,
-				61A4416129EDA321001F6AA9 /* GoogleService-Info.plist in Resources */,
+				6101D56D29F48DAF0076B7D6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

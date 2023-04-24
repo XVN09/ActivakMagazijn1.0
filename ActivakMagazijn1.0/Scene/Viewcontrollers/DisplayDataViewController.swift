@@ -26,9 +26,6 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
         tableView.delegate = self
         tableView.dataSource = self
         ref = Database.database().reference()
-
-        
-        
         
     }
     

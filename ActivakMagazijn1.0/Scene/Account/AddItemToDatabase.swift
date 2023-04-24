@@ -79,6 +79,9 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
             self.ref?.child("Info").setValue(item)
             
         }
+     //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)
+            
+        //}
     }
 
 
