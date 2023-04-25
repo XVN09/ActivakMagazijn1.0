@@ -217,7 +217,6 @@
         <scene sceneID="FEG-Ut-xpP">
             <objects>
                 <navigationController storyboardIdentifier="welcomeViewID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Bgp-NG-pOG" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KJP-EP-doH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztj-4P-kdv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -506,7 +505,7 @@
             <objects>
                 <viewController id="VJo-10-BkV" userLabel="Producten" customClass="DisplayDataViewController" customModule="ActivakMagazijn1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tLc-SU-c8c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="dIh-pU-5mm">
@@ -616,11 +615,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="E8w-6s-b3c"/>
-        <segue reference="q5D-hZ-wAp"/>
-        <segue reference="Dcz-P3-c7B"/>
-        <segue reference="MG7-hc-fo0"/>
-        <segue reference="aSQ-R3-vEH"/>
+        <segue reference="wKV-pX-gt3"/>
+        <segue reference="gtW-ws-SVO"/>
+        <segue reference="s0R-yI-ICp"/>
+        <segue reference="kUy-4v-HTQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
