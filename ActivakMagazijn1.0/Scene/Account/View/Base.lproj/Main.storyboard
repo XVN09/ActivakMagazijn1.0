@@ -216,7 +216,9 @@
         <!--Navigation Controller-->
         <scene sceneID="FEG-Ut-xpP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8QX-9r-fvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="welcomeViewID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Bgp-NG-pOG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KJP-EP-doH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztj-4P-kdv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -225,13 +227,13 @@
                         <segue destination="WZd-bc-3DC" kind="relationship" relationship="rootViewController" id="gtW-ws-SVO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8QX-9r-fvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2526" y="-1413"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nec-24-2yW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2b-lj-Se1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXZ-Et-xYb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IrV-Iv-BJN">
@@ -243,7 +245,6 @@
                         <segue destination="VJo-10-BkV" kind="relationship" relationship="rootViewController" id="q5D-hZ-wAp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T2b-lj-Se1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3042" y="70"/>
         </scene>
@@ -617,8 +618,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="wKV-pX-gt3"/>
         <segue reference="gtW-ws-SVO"/>
-        <segue reference="s0R-yI-ICp"/>
-        <segue reference="kUy-4v-HTQ"/>
+        <segue reference="MG7-hc-fo0"/>
+        <segue reference="aSQ-R3-vEH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>

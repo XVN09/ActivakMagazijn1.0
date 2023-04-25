@@ -35,12 +35,12 @@ class ProfileView : UIViewController {
             print(error)
         }
         if Auth.auth().currentUser == nil {
-            self.performSegue(withIdentifier: "BackToHomeSegue", sender: self)
+            self.performSegue(withIdentifier: "BackToHome", sender: self)
         }
     }
     
     @IBAction func BackToHomeButton(_ sender: Any){
-        self.performSegue(withIdentifier: "BackToHomeSegue", sender: self)
+        self.performSegue(withIdentifier: "BackToHome", sender: self)
     }
     
     @IBAction func UploadFIlesPressed(_ sender: Any) {
