@@ -54,7 +54,7 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
     func fetchDataFromFirebase()
     {
         self.dataArray=[]
-        ref.child("Info/\(MyData.titleText)").observeSingleEvent(of: .value, with: {snapshot in
+        ref.child("Info").observeSingleEvent(of: .value, with: {snapshot in
             let value = (snapshot ).value as? NSDictionary
             if value != nil {
                 self.noDataLabel.isHidden = true

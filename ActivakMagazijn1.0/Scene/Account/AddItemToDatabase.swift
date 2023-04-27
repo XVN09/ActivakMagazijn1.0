@@ -45,7 +45,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
        }
     
     func uploadMedia(completion : @escaping(_ url : String?)-> Void){
-        let storageRef = Storage.storage().reference().child("image.png")
+        let storageRef = Storage.storage().reference().child("Products").child(self.titleTextField.text ?? "")
         if let data = self.imageView.image!.pngData() {
             storageRef.putData(data){(metadata, error) in
                 if error != nil {
@@ -76,7 +76,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
                          "category" : self.categoryTextField.text,
                          "image" : url] as [String: Any]
             
-            self.ref?.child("Info").child(MyData.titleText).setValue(item)
+            self.ref?.child("Info").child(self.titleTextField.text ?? "").setValue(item)
             
         }
      //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)
