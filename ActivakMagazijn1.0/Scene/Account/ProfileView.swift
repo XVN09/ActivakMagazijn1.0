@@ -10,7 +10,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
-import FirebaseFirestore
 
 class ProfileView : UIViewController {
     

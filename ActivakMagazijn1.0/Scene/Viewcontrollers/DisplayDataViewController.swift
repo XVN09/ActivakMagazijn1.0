@@ -14,13 +14,12 @@ import FirebaseAuth
 class DisplayDataViewController : UIViewController, UITableViewDelegate , UITableViewDataSource {
     
     @IBOutlet weak var tableView : UITableView!
-    @IBOutlet weak var name : UILabel!
     @IBOutlet weak var noDataLabel : UILabel!
     var dataArray : [MyData] = []
     let reuseIdentifier = "DataCell"
     
-    var ref : DatabaseReference!
-
+    var ref = Database.database().reference()
+    var databaseRef = Database.database().reference()
     
     override func viewDidLoad() {
         tableView.delegate = self
@@ -54,29 +53,32 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
     func fetchDataFromFirebase()
     {
         self.dataArray=[]
-        ref.child("Info").observeSingleEvent(of: .value, with: {snapshot in
-            let value = (snapshot ).value as? NSDictionary
-            if value != nil {
-                self.noDataLabel.isHidden = true
-                var data = MyData.init()
-            let url = value?["image"] as? String ?? ""
-            let title = value?["title"] as? String ?? ""
-            let category = value?["categroy"] as? String ?? ""
-            let price = value?["price"] as? String ?? ""
-                
-                data.setData(url: url, title: title, category: category, price: price)
-                self.dataArray.append(data)
-            } else
-            {
-                self.noDataLabel.isHidden = false
+
+        ref.child("Info").observeSingleEvent(of: .value, with: { (snapshot) in
+            for child in snapshot.children {
+                let snap = child as! DataSnapshot
+                let key = snap.key
+
+                self.databaseRef.child("Info").child(key).observeSingleEvent(of: .value) { snapshot in
+                    let value = (snapshot ).value as? NSDictionary
+                                if value != nil {
+                                    self.noDataLabel.isHidden = true
+                                    let data = MyData.init()
+                                let url = value?["image"] as? String ?? ""
+                                let title = value?["title"] as? String ?? ""
+                                let category = value?["categroy"] as? String ?? ""
+                                let price = value?["price"] as? String ?? ""
+                                    
+                                    data.setData(url: url, title: title, category: category, price: price)
+                                    self.dataArray.append(data)
+                                } else
+                                {
+                                    self.noDataLabel.isHidden = false
+                                }
+                                self.tableView.reloadData()
+                }
             }
-            self.tableView.reloadData()
-            
-        }) {error in
-            print (error.localizedDescription)
-            
-        }
-   
+        })
     }
     
     @IBAction func LoginButtonTapped(){

@@ -20,7 +20,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var priceTextfield : UITextField!
     @IBOutlet weak var categoryTextField : UITextField!
  
-    var ref : DatabaseReference!
+    var ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBAction func openPhotoLibrary()
        {
            present(imagePicker, animated: true,completion: nil)
+    
        }
        
        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -45,38 +46,36 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
        }
     
     func uploadMedia(completion : @escaping(_ url : String?)-> Void){
-        let storageRef = Storage.storage().reference().child("Products").child(self.titleTextField.text ?? "")
-        if let data = self.imageView.image!.pngData() {
-            storageRef.putData(data){(metadata, error) in
-                if error != nil {
-                    print("An error occured")
-                    completion(nil)
-                }else {
-                    storageRef.downloadURL(completion: {(url,error) in
-                        print(url?.absoluteString as Any)
-                        completion(url?.absoluteString)
-                    })
+        let storageRef = Storage.storage(url: "gs://activak-57cf3.appspot.com").reference().child("Producten").child(self.titleTextField.text ?? "")
+            if let data = self.imageView.image!.pngData() {
+                storageRef.putData(data){(metadata, error) in
+                    if error != nil {
+                        print("An error occured")
+                        completion(nil)
+                    }else {
+                        storageRef.downloadURL(completion: {(url,error) in
+                            print(url?.absoluteString as Any)
+                            completion(url?.absoluteString)
+                        })
+                    }
                 }
             }
         }
-    }
     
     @IBAction func uploadData()
     {
-        ref = Database.database().reference()
-        
         uploadMedia() { url in
             guard let url = url else {
                 return
             }
             
-            let item = [ "title" : self.titleTextField.text,
-                         "description" : self.descriptionTextField.text,
-                         "price" : self.priceTextfield.text,
-                         "category" : self.categoryTextField.text,
-                         "image" : url] as [String: Any]
+            let item = [ "Title" : self.titleTextField.text,
+                         "Description" : self.descriptionTextField.text,
+                         "Price" : self.priceTextfield.text,
+                         "Category" : self.categoryTextField.text,
+                         "Image" : url] as [String: Any]
             
-            self.ref?.child("Info").child(self.titleTextField.text ?? "").setValue(item)
+            self.ref.child("Info").child(self.titleTextField.text ?? "").setValue(item)
             
         }
      //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)
