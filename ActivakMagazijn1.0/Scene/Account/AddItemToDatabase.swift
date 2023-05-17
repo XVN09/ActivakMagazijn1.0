@@ -15,18 +15,18 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
     let imagePicker : UIImagePickerController = UIImagePickerController()
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var clickToOpenGalleryButton : UIButton!
-    @IBOutlet weak var titleTextField : UITextField!
+    @IBOutlet weak var categoryLabel : UILabel!
     @IBOutlet weak var descriptionTextField : UITextField!
     @IBOutlet weak var priceTextfield : UITextField!
-    @IBOutlet weak var categoryTextField : UITextField!
- 
+    @IBOutlet weak var titleTextField : UITextField!
+    
     var ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func openPhotoLibrary()
@@ -72,17 +72,14 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
             let item = [ "Title" : self.titleTextField.text,
                          "Description" : self.descriptionTextField.text,
                          "Price" : self.priceTextfield.text,
-                         "Category" : self.categoryTextField.text,
+                         "Category" : self.titleTextField.text,
                          "Image" : url] as [String: Any]
             
-            self.ref.child("Info").child(self.titleTextField.text ?? "").setValue(item)
+            self.ref.child("Producten").child(self.titleTextField.text ?? "").setValue(item)
             
         }
      //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)
             
         //}
     }
-
-
-    
 }

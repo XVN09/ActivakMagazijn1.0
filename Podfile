@@ -6,10 +6,7 @@ target 'ActivakMagazijn1.0' do
   use_frameworks!
 
   # Pods for ActivakMagazijn1.0
-pod 'FirebaseDatabase'
-pod 'FirebaseStorage'
-pod 'FirebaseCrashlytics'
-pod 'FirebaseAnalytics'
+
 
 
   target 'ActivakMagazijn1.0Tests' do
@@ -19,6 +16,8 @@ pod 'FirebaseAnalytics'
 
   target 'ActivakMagazijn1.0UITests' do
     # Pods for testing
-  end
+end
+
+pod 'DropDown'   
 
 end

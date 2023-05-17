@@ -16,12 +16,10 @@
 	<string>com.xvn.ActivakMagazijn1-0</string>
 	<key>PROJECT_ID</key>
 	<string>activak-57cf3</string>
-	<key>STORAGE_BUCKET</key>
-	<string>activak-57cf3.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<true/>
 	<key>IS_GCM_ENABLED</key>

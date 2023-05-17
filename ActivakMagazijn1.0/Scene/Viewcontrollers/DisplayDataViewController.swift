@@ -29,7 +29,7 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        noDataLabel.isHidden = true
+        noDataLabel.isHidden = false
         fetchDataFromFirebase()
 
 

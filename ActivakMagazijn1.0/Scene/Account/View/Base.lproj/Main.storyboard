@@ -405,10 +405,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prijs" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qq-yf-ULN">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Prijs" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qq-yf-ULN">
                                 <rect key="frame" x="38" y="537.5" width="338" height="26.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="line" placeholder="Beschrijving" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRT-0v-hth">
@@ -438,12 +438,32 @@
                                     <action selector="uploadData" destination="JWT-Te-gHe" eventType="touchUpInside" id="Ty9-W3-UUm"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Categorie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if6-lT-Qd7">
-                                <rect key="frame" x="38" y="590" width="338" height="26.5"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmn-5P-Kx7">
+                                <rect key="frame" x="38" y="588" width="338" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDu-Wt-vll">
+                                        <rect key="frame" x="0.0" y="-5" width="338" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categorie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-Fu-4tp">
+                                        <rect key="frame" x="0.0" y="4" width="338" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowtriangle.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g7X-bz-moR">
+                                        <rect key="frame" x="305" y="5" width="25" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Nf-Xy-xai"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -457,7 +477,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="categoryTextField" destination="if6-lT-Qd7" id="Fzc-IX-uzU"/>
+                        <outlet property="categoryLabel" destination="CnR-Fu-4tp" id="hNa-rf-5aF"/>
                         <outlet property="clickToOpenGalleryButton" destination="fJ3-LF-da9" id="rkp-Ws-qRT"/>
                         <outlet property="descriptionTextField" destination="CRT-0v-hth" id="g0B-Rt-bJ9"/>
                         <outlet property="imageView" destination="JM6-hu-V3K" id="yYk-6q-eLs"/>
@@ -467,7 +487,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQH-Ox-Sjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5033" y="-1414"/>
+            <point key="canvasLocation" x="5031.884057971015" y="-1414.2857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shQ-k9-7p9">
@@ -604,6 +624,7 @@
         <segue reference="aSQ-R3-vEH"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowtriangle.down" catalog="system" width="128" height="120"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="logo.png" width="49.439998626708984" height="24"/>
