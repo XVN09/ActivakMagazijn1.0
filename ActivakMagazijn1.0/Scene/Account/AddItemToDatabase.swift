@@ -76,6 +76,8 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
                          "Image" : url] as [String: Any]
             
             self.ref.child("Producten").child(self.titleTextField.text ?? "").setValue(item)
+            self.present(Service.createAlertController(title: "Succes", message: "Succesvol toegevoegd aan database"  ), animated: true, completion: nil )
+
             
         }
      //   if ref.child("Info").observeSingleEvent(of: .childAdded, with: <#T##(DataSnapshot) -> Void#>)

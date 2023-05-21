@@ -54,20 +54,20 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
     {
         self.dataArray=[]
 
-        ref.child("Info").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("Producten").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
                 let key = snap.key
 
-                self.databaseRef.child("Info").child(key).observeSingleEvent(of: .value) { snapshot in
+                self.ref.child("Producten").child(key).observeSingleEvent(of: .value) { snapshot in
                     let value = (snapshot ).value as? NSDictionary
                                 if value != nil {
                                     self.noDataLabel.isHidden = true
                                     let data = MyData.init()
-                                let url = value?["image"] as? String ?? ""
-                                let title = value?["title"] as? String ?? ""
-                                let category = value?["categroy"] as? String ?? ""
-                                let price = value?["price"] as? String ?? ""
+                                let url = value?["Image"] as? String ?? ""
+                                let title = value?["Title"] as? String ?? ""
+                                let category = value?["Categroy"] as? String ?? ""
+                                let price = value?["Price"] as? String ?? ""
                                     
                                     data.setData(url: url, title: title, category: category, price: price)
                                     self.dataArray.append(data)

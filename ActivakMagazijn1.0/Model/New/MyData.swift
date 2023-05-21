@@ -10,14 +10,14 @@ import UIKit
 
 class MyData {
     
-    var imgURL : String = ""
+    var imgURL : String
     var titleText : String = ""
     var categoryText : String
     var priceText : String
     
     init()
         {
-            imgURL = ""
+            imgURL =  ""
             titleText = ""
             categoryText = ""
             priceText = ""

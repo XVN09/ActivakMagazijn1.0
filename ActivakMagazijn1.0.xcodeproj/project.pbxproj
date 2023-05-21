@@ -38,7 +38,7 @@
 		61A972A028D4D58D0007C2CD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9729F28D4D58D0007C2CD /* SignInViewController.swift */; };
 		61A972A228D4D5990007C2CD /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A972A128D4D5990007C2CD /* SingUpViewController.swift */; };
 		61A972A628D4D6860007C2CD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A972A528D4D6860007C2CD /* WelcomeViewController.swift */; };
-		61B3CBD729FB0AC00058F4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61B3CBD629FB0AC00058F4FE /* GoogleService-Info.plist */; };
+		61FCD1F32A153E9E0086B234 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61FCD1F22A153E9E0086B234 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,7 @@
 		61A9729F28D4D58D0007C2CD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		61A972A128D4D5990007C2CD /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		61A972A528D4D6860007C2CD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		61B3CBD629FB0AC00058F4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		61FCD1F22A153E9E0086B234 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +218,7 @@
 		61DB023528FBF68C00330945 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				61B3CBD629FB0AC00058F4FE /* GoogleService-Info.plist */,
+				61FCD1F22A153E9E0086B234 /* GoogleService-Info.plist */,
 				6194046028D3A201001B31E1 /* ActivakMagazijn1_0.xcdatamodeld */,
 			);
 			path = Others;
@@ -379,8 +379,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6194046728D3A202001B31E1 /* LaunchScreen.storyboard in Resources */,
-				61B3CBD729FB0AC00058F4FE /* GoogleService-Info.plist in Resources */,
 				6194046428D3A202001B31E1 /* Assets.xcassets in Resources */,
+				61FCD1F32A153E9E0086B234 /* GoogleService-Info.plist in Resources */,
 				615FA25228DB7A0600EA2FDC /* logo.png in Resources */,
 				6194045F28D3A201001B31E1 /* Main.storyboard in Resources */,
 			);
