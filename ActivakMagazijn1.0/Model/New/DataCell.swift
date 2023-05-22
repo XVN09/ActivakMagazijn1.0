@@ -13,14 +13,14 @@ class DataCell : UITableViewCell {
 
     @IBOutlet weak var dataImageView : UIImageView!
     @IBOutlet weak var dataName : UILabel!
-    @IBOutlet weak var dataCategory : UILabel!
+    @IBOutlet weak var dataPlace: UILabel!
     @IBOutlet weak var dataPrice : UILabel!
     
     func setValues(data : MyData)
     {
         
         dataName.text = data.titleText
-        dataCategory.text = data.categoryText
+        dataPlace.text = data.placeText
         dataPrice.text = data.priceText
         
         let storageRef = Storage.storage().reference(forURL: data.imgURL)

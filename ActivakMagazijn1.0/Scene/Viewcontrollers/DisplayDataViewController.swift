@@ -26,6 +26,7 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
         tableView.dataSource = self
         ref = Database.database().reference()
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,22 +55,22 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
     {
         self.dataArray=[]
 
-        ref.child("Producten").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child("1QmF9fFlYh5S4TkM_ifD-42i2ABKMC-8pVacw5L1tFGY").child("Producten").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 let snap = child as! DataSnapshot
                 let key = snap.key
 
-                self.ref.child("Producten").child(key).observeSingleEvent(of: .value) { snapshot in
+                self.ref.child("1QmF9fFlYh5S4TkM_ifD-42i2ABKMC-8pVacw5L1tFGY").child("Producten").child(key).observeSingleEvent(of: .value) { snapshot in
                     let value = (snapshot ).value as? NSDictionary
                                 if value != nil {
                                     self.noDataLabel.isHidden = true
                                     let data = MyData.init()
                                 let url = value?["Image"] as? String ?? ""
                                 let title = value?["Title"] as? String ?? ""
-                                let category = value?["Categroy"] as? String ?? ""
+                                let place = value?["Place"] as? String ?? ""
                                 let price = value?["Price"] as? String ?? ""
                                     
-                                    data.setData(url: url, title: title, category: category, price: price)
+                                    data.setData(url: url, title: title, place: place, price: price)
                                     self.dataArray.append(data)
                                 } else
                                 {
@@ -91,5 +92,15 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let selectedData = dataArray[indexPath.row]
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+                return
+            }
+            
+            detailViewController.data = selectedData
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
 }

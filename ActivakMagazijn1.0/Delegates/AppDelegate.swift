@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Auth.auth().addStateDidChangeListener{auth, user in
-            if let user = user {
+            if user != nil {
                 //User is logged in
                 Constants.isUserLoggedIn = true
             }else {

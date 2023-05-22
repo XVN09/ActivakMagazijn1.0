@@ -12,21 +12,21 @@ class MyData {
     
     var imgURL : String
     var titleText : String = ""
-    var categoryText : String
+    var placeText : String
     var priceText : String
     
     init()
         {
             imgURL =  ""
             titleText = ""
-            categoryText = ""
+            placeText = ""
             priceText = ""
         }
     
-    func setData(url : String, title : String, category : String, price : String) {
+    func setData(url : String, title : String, place : String, price : String) {
         imgURL = url
         titleText = title
-        categoryText = category
+        placeText = place
         priceText = price
     }
 

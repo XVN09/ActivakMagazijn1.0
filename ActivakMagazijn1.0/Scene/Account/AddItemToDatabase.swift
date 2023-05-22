@@ -25,7 +25,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
+        imagePicker.sourceType = .camera
         
     }
     
@@ -46,7 +46,7 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
        }
     
     func uploadMedia(completion : @escaping(_ url : String?)-> Void){
-        let storageRef = Storage.storage(url: "gs://activak-57cf3.appspot.com").reference().child("Producten").child(self.titleTextField.text ?? "")
+        let storageRef = Storage.storage(url: "gs://activak-57cf3.appspot.com").reference().child("1QmF9fFlYh5S4TkM_ifD-42i2ABKMC-8pVacw5L1tFGY").child("Producten").child(self.titleTextField.text ?? "")
             if let data = self.imageView.image!.pngData() {
                 storageRef.putData(data){(metadata, error) in
                     if error != nil {
@@ -72,11 +72,11 @@ class AddItemToDatabase: UIViewController, UIImagePickerControllerDelegate, UINa
             let item = [ "Title" : self.titleTextField.text,
                          "Description" : self.descriptionTextField.text,
                          "Price" : self.priceTextfield.text,
-                         "Category" : self.titleTextField.text,
+                         "Place" : self.titleTextField.text,
                          "Image" : url] as [String: Any]
             
-            self.ref.child("Producten").child(self.titleTextField.text ?? "").setValue(item)
-            self.present(Service.createAlertController(title: "Succes", message: "Succesvol toegevoegd aan database"  ), animated: true, completion: nil )
+            self.ref.child("1QmF9fFlYh5S4TkM_ifD-42i2ABKMC-8pVacw5L1tFGY").child("Producten").child(self.titleTextField.text ?? "").setValue(item)
+            self.present(Service.createAlertController(title: "Succes", message: "Succesvol toegevoegd aan database."  ), animated: true, completion: nil )
 
             
         }
