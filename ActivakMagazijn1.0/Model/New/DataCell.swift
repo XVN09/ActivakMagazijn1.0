@@ -25,7 +25,7 @@ class DataCell : UITableViewCell {
         
         let storageRef = Storage.storage().reference(forURL: data.imgURL)
         
-        storageRef.getData(maxSize: 28060876) {(data,error) in
+        storageRef.getData(maxSize: 200000) {(data,error) in
             if let err = error {
                 print(err)
             }else {

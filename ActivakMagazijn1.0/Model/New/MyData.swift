@@ -14,6 +14,7 @@ class MyData {
     var titleText : String = ""
     var placeText : String
     var priceText : String
+    var descText : String
     
     init()
         {
@@ -21,13 +22,15 @@ class MyData {
             titleText = ""
             placeText = ""
             priceText = ""
+            descText = ""
         }
     
-    func setData(url : String, title : String, place : String, price : String) {
+    func setData(url : String, title : String, place : String, price : String, descripiton : String) {
         imgURL = url
         titleText = title
         placeText = place
         priceText = price
+        descText = descripiton
     }
 
 }

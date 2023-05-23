@@ -26,11 +26,12 @@ class DetailViewController: UIViewController {
             titleLabel.text = data.titleText
             placeLabel.text = data.placeText
             priceLabel.text = data.priceText
+            descriptionLabel.text = data.descText
             
         }
         let storageRef = Storage.storage().reference(forURL: data!.imgURL)
         
-        storageRef.getData(maxSize: 28060876) {(data,error) in
+        storageRef.getData(maxSize: 20000) {(data,error) in
             if let err = error {
                 print(err)
             }else {

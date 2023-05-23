@@ -69,8 +69,9 @@ class DisplayDataViewController : UIViewController, UITableViewDelegate , UITabl
                                 let title = value?["Title"] as? String ?? ""
                                 let place = value?["Place"] as? String ?? ""
                                 let price = value?["Price"] as? String ?? ""
+                                let description = value?["Description"] as? String ?? ""
                                     
-                                    data.setData(url: url, title: title, place: place, price: price)
+                                    data.setData(url: url, title: title, place: place, price: price, descripiton: description)
                                     self.dataArray.append(data)
                                 } else
                                 {
