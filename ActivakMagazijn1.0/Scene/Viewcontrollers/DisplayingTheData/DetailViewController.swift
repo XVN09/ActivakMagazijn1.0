@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var Image : UIImageView!
+    @IBOutlet weak var categoryLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class DetailViewController: UIViewController {
             placeLabel.text = data.placeText
             priceLabel.text = data.priceText
             descriptionLabel.text = data.descText
+            categoryLabel.text = data.catText
             
         }
         let storageRef = Storage.storage().reference(forURL: data!.imgURL)

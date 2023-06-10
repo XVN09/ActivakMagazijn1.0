@@ -20,7 +20,7 @@ class DataCell : UITableViewCell {
     {
         
         dataName.text = data.titleText
-        dataPlace.text = data.placeText
+        dataPlace.text = data.catText
         dataPrice.text = data.priceText
         
         let storageRef = Storage.storage().reference(forURL: data.imgURL)

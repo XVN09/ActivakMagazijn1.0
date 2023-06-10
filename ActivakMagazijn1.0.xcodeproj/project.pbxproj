@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		612353CE2A1AA35B00D4DE79 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612353CD2A1AA35B00D4DE79 /* DetailViewController.swift */; };
+		614A06EA2A1E3C70006B4A84 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A06E92A1E3C70006B4A84 /* Candy.swift */; };
+		614A06EC2A1E9095006B4A84 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614A06EB2A1E9095006B4A84 /* FilterOption.swift */; };
 		615FA25228DB7A0600EA2FDC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 615FA25128DB7A0600EA2FDC /* logo.png */; };
 		6164909629E889B20007C752 /* DataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909529E889B20007C752 /* DataCell.swift */; };
 		6164909829E9E0B10007C752 /* MyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164909729E9E0B10007C752 /* MyData.swift */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		612353CD2A1AA35B00D4DE79 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		614A06E92A1E3C70006B4A84 /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
+		614A06EB2A1E9095006B4A84 /* FilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
 		615FA25128DB7A0600EA2FDC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		6164909529E889B20007C752 /* DataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCell.swift; sourceTree = "<group>"; };
 		6164909729E9E0B10007C752 /* MyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyData.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		614A06E62A1D3FD9006B4A84 /* DisplayingTheData */ = {
+			isa = PBXGroup;
+			children = (
+				6164909929E9EFD80007C752 /* DisplayDataViewController.swift */,
+				612353CD2A1AA35B00D4DE79 /* DetailViewController.swift */,
+			);
+			path = DisplayingTheData;
+			sourceTree = "<group>";
+		};
 		614F656128D65FA00049C7BB /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +208,7 @@
 			children = (
 				6164909529E889B20007C752 /* DataCell.swift */,
 				6164909729E9E0B10007C752 /* MyData.swift */,
+				614A06EB2A1E9095006B4A84 /* FilterOption.swift */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -222,6 +236,7 @@
 			children = (
 				61FCD1F22A153E9E0086B234 /* GoogleService-Info.plist */,
 				6194046028D3A201001B31E1 /* ActivakMagazijn1_0.xcdatamodeld */,
+				614A06E92A1E3C70006B4A84 /* Candy.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -251,8 +266,7 @@
 		61DB023828FBF6FE00330945 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
-				6164909929E9EFD80007C752 /* DisplayDataViewController.swift */,
-				612353CD2A1AA35B00D4DE79 /* DetailViewController.swift */,
+				614A06E62A1D3FD9006B4A84 /* DisplayingTheData */,
 			);
 			path = Viewcontrollers;
 			sourceTree = "<group>";
@@ -411,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6164909829E9E0B10007C752 /* MyData.swift in Sources */,
+				614A06EA2A1E3C70006B4A84 /* Candy.swift in Sources */,
 				61A972A628D4D6860007C2CD /* WelcomeViewController.swift in Sources */,
 				61A4415F29EB2132001F6AA9 /* AddItemToDatabase.swift in Sources */,
 				61A972A028D4D58D0007C2CD /* SignInViewController.swift in Sources */,
@@ -421,6 +436,7 @@
 				61A972A228D4D5990007C2CD /* SingUpViewController.swift in Sources */,
 				6194045828D3A201001B31E1 /* AppDelegate.swift in Sources */,
 				6194045A28D3A201001B31E1 /* SceneDelegate.swift in Sources */,
+				614A06EC2A1E9095006B4A84 /* FilterOption.swift in Sources */,
 				61A4415429EAC4E5001F6AA9 /* ProfileView.swift in Sources */,
 				6194046228D3A201001B31E1 /* ActivakMagazijn1_0.xcdatamodeld in Sources */,
 				612353CE2A1AA35B00D4DE79 /* DetailViewController.swift in Sources */,
