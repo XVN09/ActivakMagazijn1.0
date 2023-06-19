@@ -14,6 +14,7 @@ import FirebaseDatabase
 class ProfileView : UIViewController {
     
     @IBOutlet weak var UploadFiles: UIButton!
+    @IBOutlet weak var usrLabel: UILabel!
     
     override func viewDidLoad() {
         
@@ -24,6 +25,8 @@ class ProfileView : UIViewController {
         } else {
             UploadFiles.isHidden = false
         }
+        
+        usrLabel.text = "Hallo" + Constants.username
     }
     
     @IBAction func onLogOutButtonTapped(){

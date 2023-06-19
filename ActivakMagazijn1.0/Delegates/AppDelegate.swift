@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if user != nil {
                 //User is logged in
                 Constants.isUserLoggedIn = true
+                guard let user = user?.displayName else {return}
+                Constants.username = user
             }else {
                 //user is not logged in
                 Constants.isUserLoggedIn = false

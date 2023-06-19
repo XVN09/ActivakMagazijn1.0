@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="2526" y="-1413"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Producten-->
         <scene sceneID="Nec-24-2yW">
             <objects>
-                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="UXZ-Et-xYb" sceneMemberID="viewController">
+                <navigationController title="Producten" extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="UXZ-Et-xYb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IrV-Iv-BJN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -344,6 +344,19 @@
                                     <segue destination="Mw9-nS-7vb" kind="presentation" modalPresentationStyle="fullScreen" id="E8w-6s-b3c"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJO-Gv-nwM">
+                                <rect key="frame" x="57" y="196" width="300" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name="BalooBhai2-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oC-Xh-Hee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -362,6 +375,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="UploadFiles" destination="koI-r8-SAR" id="n9V-5y-cmi"/>
+                        <outlet property="usrLabel" destination="FJO-Gv-nwM" id="xUI-oW-9Ni"/>
                         <segue destination="UXZ-Et-xYb" kind="presentation" identifier="BackToHome" animates="NO" modalPresentationStyle="fullScreen" id="gqf-yj-T2K"/>
                     </connections>
                 </viewController>
@@ -583,33 +597,6 @@
                                 <action selector="loginButtonTapped:" destination="VJo-10-BkV" id="yb2-gc-A34"/>
                             </connections>
                         </barButtonItem>
-                        <view key="titleView" contentMode="scaleToFill" id="Wuc-Vj-FWz">
-                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2V6-0t-gu2">
-                                    <rect key="frame" x="-208" y="-16" width="416" height="35"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="416" id="8w6-2M-iKn"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Producten" imagePadding="0.0">
-                                        <imageReference key="image" image="arrow.down.circle" catalog="system" symbolScale="large" variableValue="0.0"/>
-                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="categoryButtonTapped" destination="VJo-10-BkV" eventType="touchUpInside" id="wtf-xQ-BbJ"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="2V6-0t-gu2" secondAttribute="bottom" constant="-19" id="YxD-Qv-IZ5"/>
-                                <constraint firstItem="2V6-0t-gu2" firstAttribute="centerX" secondItem="Wuc-Vj-FWz" secondAttribute="centerX" id="YzS-yu-VA8"/>
-                                <constraint firstItem="2V6-0t-gu2" firstAttribute="top" secondItem="Wuc-Vj-FWz" secondAttribute="top" constant="-16" id="nQI-Hf-sfk"/>
-                            </constraints>
-                        </view>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" catalog="system" id="bif-Jz-2Ru">
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
@@ -735,7 +722,6 @@
         <segue reference="aSQ-R3-vEH"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="logo.png" width="49.439998626708984" height="24"/>

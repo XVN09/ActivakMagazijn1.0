@@ -13,13 +13,13 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
 
     var dataArray: [MyData] = []
     var filteredDataArray: [MyData] = [] // For storing filtered data
+    var categoryFilter: [MyData] = []
     let reuseIdentifier = "DataCell"
 
     var ref = Database.database().reference()
     var databaseRef = Database.database().reference()
 
     let searchController = UISearchController(searchResultsController: nil)
-    var searchButton: UIButton!
     var categories: [String] = [] // Array to store unique categories
 
     override func viewDidLoad() {
@@ -34,20 +34,18 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
         rotatingThing.startAnimating()
 
         // Configure search controller
-        searchController.searchResultsUpdater = self
-               searchController.obscuresBackgroundDuringPresentation = false
-               searchController.searchBar.placeholder = "Search"
-               navigationItem.searchController = searchController
-               definesPresentationContext = true
-               
-               let categoryButton = UIButton(type: .custom)
-                       categoryButton.setImage(UIImage(systemName: "line.horizontal.3.decrease.circle"), for: .normal)
-                       categoryButton.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
-                       searchController.searchBar.searchTextField.leftView = categoryButton
-                       searchController.searchBar.searchTextField.leftView?.tintColor = .black
-                       searchController.searchBar.searchTextField.leftViewMode = .always
-
-
+       searchController.searchResultsUpdater = self
+       searchController.obscuresBackgroundDuringPresentation = false
+       searchController.searchBar.placeholder = "Search"
+       navigationItem.searchController = searchController
+       definesPresentationContext = true
+       
+       let categoryButton = UIButton(type: .custom)
+               categoryButton.setImage(UIImage(systemName: "line.horizontal.3.decrease.circle"), for: .normal)
+               categoryButton.addTarget(self, action: #selector(categoryButtonTapped), for: .touchUpInside)
+               searchController.searchBar.searchTextField.leftView = categoryButton
+               searchController.searchBar.searchTextField.leftView?.tintColor = .black
+               searchController.searchBar.searchTextField.leftViewMode = .whileEditing
         // Fetch data from Firebase
         fetchDataFromFirebase()
     }
@@ -123,6 +121,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
 
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
+
     }
 
     func searchBarIsEmpty() -> Bool {
@@ -191,7 +190,7 @@ class DisplayDataViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func filterContentForCategory(_ category: String) {
-        filteredDataArray = dataArray.filter { $0.catText.lowercased() == category.lowercased() }
+        categoryFilter = dataArray.filter { $0.catText.lowercased() == category.lowercased() }
         tableView.reloadData()
     }
     
